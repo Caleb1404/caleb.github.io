@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 50%;
+            text-align: center;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+
+Velg film: <select id="film">
+    <option value="Titanic">Titanic</option>
+    <option value="Forrest Gump">Forrest Gump</option>
+    <option value="Avengers">Avengers</option>
+    <option value="21 Jump Street">21 Jump Street</option>
+</select>
+<br>
+
+<!span boksene er for feilmeldingene som skal inn senere!>
+
+Antall: <input type="number" id="antall" min="1" max="50" style="width: 35px"> <span class="error" id="input-message-1"></span> <br>
+Fornavn: <input type="text" id="fornavn"> <span class="error" id="input-message-2"> </span><br>
+Etternavn: <input type="text" id="etternavn"> <span class="error" id="input-message-3"> </span><br>
+Telefonnr: <input type="text" id="tlfnr"> <span class="error" id="input-message-4"> </span><br>
+Epost: <input type="text" id="epost"> <span class="error" id="input-message-5"> </span><br>
+<button onclick="kjøp()">Kjøp billett</button>
+
+<h2>Alle billetter</h2>
+<div id="bestillinger"></div>
+<button id="slett" onclick="slett()">Slett alle billettene</button>
+
+</body>
+</html>
